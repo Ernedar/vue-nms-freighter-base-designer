@@ -1,8 +1,8 @@
-<script>
+<script setup lang="ts">
 </script>
 
 <template>
 </template>
 
-<style>
+<style src="./style.css">
 </style>
