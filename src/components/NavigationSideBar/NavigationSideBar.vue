@@ -1,9 +1,10 @@
 <template>
   <div>
     <nav>
+      <h2>Building Parts Legend</h2>
       <ul>
-        <li>
-          <a href="">Home</a>
+        <li v-for="category in freighterCategories" :key="category.productModule">
+          <NavigationCategory :category="category"></NavigationCategory>
         </li>
       </ul>
     </nav>

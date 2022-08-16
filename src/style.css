@@ -1,0 +1,114 @@
+html {
+
+	/* COLOR TINTS */
+
+	--color-blue-darkest: #0C3490;
+	--color-blue-darkest-rgb: 12, 52, 144;
+
+	--color-blue-dark: #2A4D9E;
+	--color-blue-dark-rgb: 42, 77, 158;
+
+	--color-blue-mid-dark: #4967AC;
+	--color-blue-mid-dark-rgb: 73, 103, 172;
+
+	--color-blue-mid: #6780BA;
+	--color-blue-mid-rgb: 103, 128, 186;
+
+	--color-blue-mid-light: #869AC8;
+	--color-blue-mid-light-rgb: 134, 154, 200;
+
+	--color-blue-light: #A4B3D5;
+	--color-blue-light-rgb: 164, 179, 213;
+
+	--color-blue-lightest: #C2CCE3;
+	--color-blue-lightest-rgb: 194, 204, 227;
+
+	--color-blue-ultralight: #E1E6F1;
+	--color-blue-ultralight-rgb: 225, 230, 241;
+
+	/* PAGE SETTINGS */
+
+	--background-color: var(--color-blue-ultralight);
+	--pure-white: #ffffff;
+	--text-light: #f7f7f7;
+	--base-black: #0d0d0d;
+	--font-size-max: 16px;
+	--font-size-min: 12px;
+
+	--padding-main: 1rem;
+
+	/* BASE FONT SETTING */
+	font-size: var(--font-size-min);
+}
+
+@media only screen and (min-width: 450px) {
+	html {
+		  font-size: calc(var(--font-size-min) + (16 - 12) * (100vw - 450px) / (1600 - 450));
+	}
+  }
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--background-color);
+  }
+
+  * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+
+  .main-container {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: flex-start;
+	align-items: stretch;
+	flex-wrap: nowrap;
+  }
+
+  /* TABLE */
+
+  table,
+  table tr,
+  tr td,
+  table tbody,
+  table thead,
+  table tfoot,
+  table tr th,
+  table tfoot tr tf {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-spacing: 0;
+	border-collapse: collapse;
+	background-image: none;
+	vertical-align: baseline;
+  }
+
+  table {
+	table-layout: fixed;
+	border-spacing: 0;
+	border-collapse: collapse;
+  }
+
+  th,
+  td {
+	vertical-align: bottom;
+  }
+
+  .btn,
+button {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  transition: all 300ms ease-in-out;
+  border-width: 0;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
+  cursor: pointer;
+}
