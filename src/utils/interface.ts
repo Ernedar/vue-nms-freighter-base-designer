@@ -1,5 +1,3 @@
-import { freighterModules } from './enum';
-
 export interface buildingProduct {
   productId: number;
   productName: string;
@@ -12,7 +10,6 @@ export interface buildingProducts {
 }
 
 export interface buildingCategory {
-  productModule: freighterModules;
   productCategoryName: string;
 }
 
@@ -23,3 +20,4 @@ export interface baseFloor {
 export interface baseFloors {
   [index: number]: baseFloor;
 }
+

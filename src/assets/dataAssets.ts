@@ -1,38 +1,30 @@
 import { buildingProducts, buildingCategory } from '../utils/interface';
-import { freighterModules } from '../utils/enum';
 
 export const freighterCategoryCore: buildingCategory = {
-  productModule: freighterModules.core,
   productCategoryName: 'Core Freighter Modules',
 };
 
 export const freighterCategoryHighTech: buildingCategory = {
-  productModule: freighterModules.highTech,
   productCategoryName: 'High-Tech Room Modules',
 };
 
 export const freighterCategorySmallScale: buildingCategory = {
-  productModule: freighterModules.smallScale,
   productCategoryName: 'Small-Scale Technology',
 };
 
 export const freighterCategoryIndustrial: buildingCategory = {
-  productModule: freighterModules.industrial,
   productCategoryName: 'Industrial Room',
 };
 
 export const freighterCategoryAgriRoom: buildingCategory = {
-  productModule: freighterModules.agriculturalRoom,
   productCategoryName: 'Agricultural Room Modules',
 };
 
 export const freighterCategoryPlants: buildingCategory = {
-  productModule: freighterModules.plants,
   productCategoryName: 'Plants',
 };
 
 export const freighterCategoryLegacy: buildingCategory = {
-  productModule: freighterModules.legacy,
   productCategoryName: 'Legacy Structures',
 };
 

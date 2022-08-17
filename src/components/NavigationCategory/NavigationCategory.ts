@@ -1,21 +1,29 @@
-import { buildingCategory } from '@/utils/interface';
+import { Fragment } from 'vue-fragment';
 import { defineComponent } from 'vue';
 import { freighterProductSet } from '@/assets/dataAssets';
+import { buildingCategory } from '@/utils/interface';
 
 export default defineComponent({
+  components: {
+    Fragment,
+  },
   props: {
-    category: {
-      type: Object as () => buildingCategory,
-      required: true,
-    },
+    category: { type: Object as () => buildingCategory, require: true },
+    openedCategory: String,
   },
   data() {
     return {
       isOpened: false,
+      currentCategory: '',
     };
   },
   setup(props) {
-    const navCategory = props.category;
+    let navCategory = {
+      productCategoryName: '',
+    };
+    if (props.category) {
+      navCategory = props.category;
+    }
     const freighterProducts = freighterProductSet;
 
     return {
@@ -23,9 +31,19 @@ export default defineComponent({
       freighterProducts,
     };
   },
+  watch: {
+    openedCategory(newValue) {
+      this.currentCategory = newValue;
+      this.isOpened = this.navCategory.productCategoryName === newValue;
+    },
+  },
   methods: {
-    toggleCategory() {
-      this.isOpened = !this.isOpened;
+    toggleCategory(categoryName: string) {
+      if (this.currentCategory === categoryName) {
+        this.$emit('update:openedCategory', '');
+      } else {
+        this.$emit('update:openedCategory', categoryName);
+      }
     },
   },
 });

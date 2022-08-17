@@ -1,0 +1,7 @@
+nav {
+	width: 30%;
+	min-width: 20.83rem;
+	max-width: 21.875rem;
+	height: 100vh;
+	background-color: var(--color-blue-darkest);
+}
