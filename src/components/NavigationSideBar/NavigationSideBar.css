@@ -1,7 +1,29 @@
 nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	width: 30%;
 	min-width: 20.83rem;
 	max-width: 21.875rem;
 	height: 100vh;
 	background-color: var(--color-blue-darkest);
+}
+
+ul {
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+
+li {
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+
+h2 {
+	color: var(--text-light);
+	text-align: center;
+	margin-bottom: 2rem;
 }

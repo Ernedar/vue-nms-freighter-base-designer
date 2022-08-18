@@ -1,15 +1,14 @@
 <template>
 	<fragment>
-		<button @click="toggleCategory(navCategory.productCategoryName)">{{navCategory.productCategoryName}}</button>
-		<transition>
+		<button @click="toggleCategory(category.productCategoryName)">{{category.productCategoryName}}<icon-chevron-up fill="var(--text-light)" width="1.5rem" height="1.5rem" :rotate="isOpened" /></button>
+		<transition name="roll">
 			<ul v-show="isOpened">
-			<template v-for="(product, index) in freighterProducts">
-				<li v-if="product.productCategory === navCategory" :key="index">
-				<p>
-				<a :href="product.productLink" target="_blank" rel="noreferrer noopener">{{product.productName}}</a>
-				</p>
+				<li v-for="(product, index) in filteredProducts" :key="index">
+					<p>
+						<a class="nav-link" :href="product.productLink" target="_blank" rel="noreferrer noopener">{{product.productName}}</a>
+					</p>
+					<icon-external-link fill="var(--text-light)"/>
 				</li>
-			</template>
 			</ul>
 		</transition>
 	</fragment>

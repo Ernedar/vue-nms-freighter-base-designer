@@ -29,9 +29,10 @@ html {
 	/* PAGE SETTINGS */
 
 	--background-color: var(--color-blue-ultralight);
-	--pure-white: #ffffff;
-	--text-light: #f7f7f7;
+	--base-white: #ffffff;
 	--base-black: #0d0d0d;
+	--text-light: #f7f7f7;
+	--text-dark: var(--base-black);
 	--font-size-max: 16px;
 	--font-size-min: 12px;
 
@@ -53,13 +54,16 @@ html {
 	--line-height-sm: 1.375;
 	--line-height-xs: 1.250;
 
+	/* ANIMATION TIMERS */
+	--button-flip-time: 450ms;
+
 	/* BASE FONT SETTING */
 	font-size: var(--font-size-min);
 }
 
 @media only screen and (min-width: 450px) {
 	html {
-		  font-size: calc(var(--font-size-min) + (16 - 12) * (100vw - 450px) / (1600 - 450));
+		  font-size: calc(var(--font-size-min) + (16 - 12) * (100vw - 500px) / (1920 - 500));
 	}
   }
 
@@ -67,6 +71,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: var(--background-color);
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
 
   * {
@@ -114,11 +119,10 @@ body {
 	vertical-align: bottom;
   }
 
+/* BUTTON */
+
   .btn,
 button {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
   transition: all 300ms ease-in-out;
   border-width: 0;
   background-color: transparent;
@@ -128,6 +132,8 @@ button {
   line-height: var(--line-height-md);
   cursor: pointer;
 }
+
+/* FONT SETTINGS */
 
 h1, .h1 {
 	font-size: var(--font-xxl);

@@ -1,0 +1,70 @@
+button {
+	display: flex;
+	justify-content: space-between;
+	align-items: left;
+	text-align: center;
+	width: 90%;
+	min-width: 200px;
+	font-size: var(--font-sm);
+	line-height: var(--line-height-sm);
+	padding: calc(var(--padding-main) / 3) var(--padding-main);
+	color: var(--text-light);
+	background-color: var(--color-blue-dark);
+	margin: 0 auto 0.4rem auto;
+	transition: all var(--button-flip-time) ease-in-out;
+}
+
+button:hover {
+	color: var(--color-blue-lightest);
+	background-color: var(--color-blue-mid-dark);
+}
+
+p {
+	text-align: center;
+	margin-bottom: 0.4rem;
+	font-size: var(--font-xs);
+	line-height: var(--line-height-xs);
+}
+
+a {
+	text-decoration: none;
+	color: var(--text-light);
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	text-decoration: dashed;
+}
+
+ul {
+	width: 100%;
+	margin-bottom: 0.4rem;
+	overflow: hidden;
+}
+
+li {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.roll-enter-active,
+.roll-leave-active {
+	transition: opacity var(--button-flip-time) ease, max-height var(--button-flip-time) ease-in-out;
+}
+
+.roll-enter,
+.roll-leave-to {
+	opacity: 0;
+	max-height: 0px;
+}
+
+.roll-enter-to,
+.roll-leave {
+	opacity: 1;
+	max-height: 500px;
+}
