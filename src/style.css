@@ -169,3 +169,14 @@ p {
 	font-size: var(--font-sm);
 	line-height: var(--line-height-sm);
 }
+
+/*  APP LAYOUT */
+
+#app {
+	display: flex;
+	justify-content: flex-start;
+	align-items: stretch;
+	width: 100%;
+	height: auto;
+	max-height: 100vh;
+}

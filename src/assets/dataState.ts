@@ -1,4 +1,4 @@
-import { baseFloor } from '@/utils/interface';
+import { baseFloor, baseFloors } from '@/utils/interface';
 
 export const baseFloorLayout: baseFloor = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -23,4 +23,6 @@ export const baseFloorLayout: baseFloor = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 ];
+
+export const baseFloorLevelLayout: baseFloors = [baseFloorLayout];
 
