@@ -5,7 +5,7 @@
 		stroke: stroke,
 		fill: fill,
 		backgroundColor: background,
-	}" :class="{'flip': rotate}">
+	}" :class="tagClasses">
 		<polygon points="203.718,91.567 0,294.621 21.179,315.869 203.718,133.924 386.258,315.869 407.436,294.621 "/>
 	</svg>
 </template>
@@ -41,6 +41,15 @@
 			rotate: {
 				type: Boolean,
 				default: false
+			},
+			classImport: {
+				type: String,
+				default: ''
+			}
+		},
+		computed: {
+			tagClasses() {
+				return `${this.rotate ? 'flip' : ''} ${this.classImport}`
 			}
 		}
 	})
