@@ -59,6 +59,12 @@ html {
 
 	/* BASE FONT SETTING */
 	font-size: var(--font-size-min);
+
+	/* COMPONENT INJECTION */
+
+	/* DESIGNER */
+
+	--designer-legend-height: 10rem;
 }
 
 @media only screen and (min-width: 450px) {
